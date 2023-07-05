@@ -1,0 +1,513 @@
+/* Fonts */
+@font-face {
+    font-family: 'Ortankhangeultext';
+    src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab5bf617bb88f9d9ace8_OrtankHangeulText-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ortankhangeultext';
+    src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab8084451636a5964c5f_OrtankHangeulText-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ortankhangeultext';
+    src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab2694e636357948837e_OrtankHangeulText-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* only test*/
+
+/* General */
+body {word-break: keep-all;
+  background-color: #f3f2ea;
+  font-family: 'Ortankhangeultext', sans-serif;
+  font-weight: 400;
+  color: #584c43;
+margin:0;padding:0}
+
+/* Main page */
+.heading {display: block;
+  margin:20px 0;
+  line-height: 36px;
+  font-size: 24px;
+  color: #584c43;
+  font-weight: 400;
+  margin-bottom: 0;}
+
+.level-label {display: block;
+  font-size: 16px;
+  line-height: 36px;
+  color:RGBa(88,76,67,0.6);
+  font-weight: 400;
+  margin-bottom: 0;}
+
+.level-label strong{
+    color:#584c43;
+    font-weight:500;}
+
+
+
+/* General-Cards */
+.flip-container {
+  position: relative;
+  display: inline-block;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.flip-container .flipper {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 0.5s;
+  -ms-transform-style: preserve-3d;
+  -ms-transition: 0.5s;
+  -o-transform-style: preserve-3d;
+  -o-transition: 0.5s;
+}
+.flip-container.active .flipper {
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid RGBa(88,76,67,0.4);
+  margin:0;padding:0;
+}
+
+.front {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  -moz-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+
+
+
+.front label {font:0;line-height:0;}
+
+.back {
+  overflow: hidden;
+  text-align: left;
+  vertical-align: middle;
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.back .label {display:block;
+    width:100%;max-width:100%;
+    position:absolute;bottom:0;
+    background-color: RGBa(88,76,67,0.6);
+    padding: 5px 8px;
+    line-height: 18px;}
+
+.label .name {
+    display: inline;
+    width: 100%;
+    color:white;
+    font-weight: 500;
+    position: relative;
+    border-radius:0px;
+    margin:0 1px 0 0;
+}
+
+.label .desc{display: inline;
+    width: 100%;
+    color:white;
+    font-weight:500;
+    position: relative;
+    margin:0}
+
+
+
+
+
+/* Timer */
+.timer {
+    display: none;
+    position:absolute;
+    pointer-events: none;
+    left:20px;
+    top: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    z-index: 2;
+}
+
+.timer .stopwatch {position:relative;background-color:#584c43;color:#f3f2ea;border-radius:30px;padding:10px;margin-bottom:5px}
+
+.timer label#minutes,
+.timer label#seconds {
+  display: inline;
+  font-size: 20px;
+}
+.timer .time {
+  position:relative;
+  display: none;
+  font-size: 13px;text-align:left;z-index: 3;
+}
+
+/* Buttons */
+
+.wrapper_btn{margin-top:60px;}
+
+.btn {
+  font-family: 'Ortankhangeultext', sans-serif;
+  margin:0 6px;
+  border: 1px solid #7C6F67;
+  border-radius: 60px;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 10px;
+  display: inline-block;
+  background-color: #f3f2ea;
+  width:100px;
+  height:100px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #584c43;
+  box-shadow: 0 10px 0 #7C6F67;
+  cursor: pointer;
+  transition: all 100ms linear;
+}
+.btn:hover {
+  -moz-transform: translateY(6px);
+  -o-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  box-shadow: 0 4px 0 #7C6F67;
+}
+.btn:focus {
+  outline: 0;
+}
+
+#btn-start-game8 {background-color:#6dc8ad}
+#btn-start-game12 {background-color:#ba9cdc}
+#btn-start-game20 {background-color:#ffb165}
+
+.btn-refresh {
+    display: inline-block;
+    position:absolute;
+    top:20px;right:20px;
+    width:auto;height:auto;
+    margin:0;
+    padding:8px 14px;
+    font-size:16px;
+    background-color:#f3f2ea;
+    z-index:3;
+    border:1px solid #7C6F67;
+    border-radius:30px;line-height:20px;
+    display: inline-block;
+  background-color: #f3f2ea;
+  font-weight: 400;
+  text-decoration: none;
+  color: #584c43;
+  box-shadow: 0 6px 0 #7C6F67;
+  cursor: pointer;
+  transition: all 100ms linear;
+font-family: 'Ortankhangeultext', sans-serif;}
+
+.btn-refresh:hover {
+  -moz-transform: translateY(3px);
+  -o-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 #7C6F67;
+}
+
+
+
+/* Helpers */
+.align-center {
+  text-align: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+/* Reponsive Rules */
+@media screen and (max-width: 1200px) {
+
+
+}
+@media screen and (max-width: 992px) {
+
+
+}
+@media screen and (max-width: 768px) {
+
+}
+/* Animations */
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+  15% {
+    transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  30% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg) scale(1.4);
+  }
+  45% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+  }
+  60% {
+    transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 1deg);
+  }
+  75% {
+    transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: none;
+  }
+}
+.wobble {
+  animation: wobble 600ms ease-in-out;
+}
+
+
+
+/*모달*/
+
+
+
+
+.modal {display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content {position: fixed;
+                height: 240px;
+                width: 400px;
+                text-align: center;
+                border-radius: 20px;
+                background-color: #7C6F67;
+                color: #f3f2ea;
+                left: calc(50% - 200px);
+                top: calc(50% - 140px);
+                align-content: center;align-items: center;}
+
+        .modal-content.name {font-size:18px;line-height:24px;}
+        .modal-content.desc {font-size:14px;line-height:24px;margin-bottom:20px;}
+        .modal-content.year {font-size:14px;line-height:24px;margin-bottom:20px;}
+        .modal-content.quote {font-size:14px;line-height:24px;}
+
+
+        .close {
+            float: right;
+            font-size: 16px;
+            font-weight: 300;
+            font-size:16px;
+            cursor: pointer;
+            position: absolute;top:15px;right:15px;
+        }
+
+
+
+
+/* 8 Cards */
+#cards-container-game8 {
+  max-width:800px;
+  display: block;
+  margin: 40px auto;
+  position: absolute; left: 0;right: 0;}
+   
+
+#cards-container-game8 .flip-container {
+  margin: 10px;}
+
+#cards-container-game8 .flip-container,
+#cards-container-game8 .front,
+#cards-container-game8 .back {
+  border-radius:15px;
+  width: 180px;
+  height: 180px;}
+
+
+#cards-container-game8 .front {background-image: url("img/card-front-8.png");}
+
+
+#cards-container-game8 .name {font-size: 15px;}
+#cards-container-game8 .desc {font-size:11px;}
+
+
+/* 12 Cards */
+#cards-container-game12 {
+  display: block;
+  margin: 40px auto;
+  max-width:1000px;
+position:absolute;left:0;right:0}
+
+
+
+#cards-container-game12 .flip-container {
+  margin: 10px;}
+
+#cards-container-game12 .flip-container,
+#cards-container-game12 .front,
+#cards-container-game12 .back {
+  border-radius:10px;
+  width: 140px;
+  height: 140px;}
+
+#cards-container-game12 .front {
+    background-image: url("img/card-front-12.png");
+    background-size: 108%;background-position: center;}
+
+#cards-container-game12 .back label {
+  font-size: 0.8vw;
+  padding:0.2vw 0;}
+
+
+/* 20 Cards */
+#cards-container-game20 {
+  display: block;
+  margin: 40px auto;
+  max-width:1200px;
+    position: absolute;right:0;left:0;}
+
+#cards-container-game20 .flip-container {
+  margin: 8px;}
+
+#cards-container-game20 .flip-container,
+#cards-container-game20 .front,
+#cards-container-game20 .back {
+  border-radius:10px;
+  width:120px;
+  height:120px;}
+
+#cards-container-game20 .front {
+    background-image: url("img/card-front-20.png");
+    background-size: 114%;background-position: center;}
+
+#cards-container-game20 .back label {
+  font-size: 12px;
+  padding:2px 0;}
+
+
+/* Reponsive Rules */
+@media screen and (max-width: 1200px) {
+    
+
+    #cards-container-game20 {
+        max-width:100%}
+    #cards-container-game20 .flip-container {
+        margin: 0.7vw 0.8vw;}
+    #cards-container-game20 .flip-container,
+    #cards-container-game20 .front,
+    #cards-container-game20 .back {
+        width: 10vw;
+        height: 10vw;}
+    #cards-container-game20 .back label {
+        font-size: 0.8vw;
+        padding:0.2vw 0;}
+}
+
+@media screen and (max-width: 992px) {
+    #cards-container-game8 {
+        max-width:100%;}
+    #cards-container-game8 .flip-container {
+        margin: 1.2vw;}
+    #cards-container-game8 .flip-container,
+    #cards-container-game8 .front,
+    #cards-container-game8 .back {
+        width: 20vw;
+        height: 20vw;}
+    
+    
+
+
+    #cards-container-game12 {
+        max-width:100%;}
+    #cards-container-game12 .flip-container {
+        margin: 1.2vw;}
+    #cards-container-game12 .flip-container,
+    #cards-container-game12 .front,
+    #cards-container-game12 .back {
+        width: 20vw;
+        height: 20vw;}
+
+
+    #cards-container-game20 {
+        max-width:100%}
+    #cards-container-game20 .flip-container {
+        margin: 0.7vw 1vw;}
+    #cards-container-game20 .flip-container,
+    #cards-container-game20 .front,
+    #cards-container-game20 .back {
+        width: 15vw;
+        height: 15vw;}
+    #cards-container-game20 .back label {
+        font-size: 1.4vw;
+        padding:0.2vw 0;}
+}
+
+@media screen and (max-width: 768px) {
+    #cards-container-game8 .name{font-size:13px;}
+    #cards-container-game8 .desc {display:none;}
+}
+
+@media screen and (max-width: 430px) {
+    .btn{display:block;margin:20px auto;}
+    .heading{position:fixed;top:0;left:0;right:0;border-bottom:1px solid #584c43;margin:15px 20px;padding-bottom:10px;z-index:3;background-color:#f3f2ea;font-size:18px;line-height:26px}
+    .align-center {position: relative;top:64px;}
+    .level-label {font-size:12px;line-height:24px;position:absolute;display:inline-block;right:0;top:0}
+    .btn-refresh {top:0;font-size:14px;line-height:14px;padding:8px 10px 6px 10px;box-shadow: 0 4px 0 #7C6F67;}
+    .timer {font-size:16px;line-height:16px;top:0;}
+    .timer label#minutes, .timer label#seconds {font-size:16px}
+    .timer .stopwatch {text-align:center;padding:8px 10px}
+    .timer .time{display:inline;position:absolute;top: 0;width: 100%;left: 80px;font-size:12px}
+    .heading{text-align: left;}
+    #cards-container-game8, #cards-container-game12, #cards-container-game20 {
+  margin:60px auto;}
+    
+    .back .label {line-height:12px;padding:3px 0 5px 5px;}
+    #cards-container-game8 .name {font-size: 12px;}
+
+    
+    
+}
