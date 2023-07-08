@@ -35,13 +35,16 @@ body {word-break: keep-all;
 margin:0;padding:0}
 
 /* Main page */
-.heading {display: block;
+.heading {display:block;
   margin:20px 0;
-  line-height: 36px;
-  font-size: 24px;
-  color: #584c43;
-  font-weight: 400;
-  margin-bottom: 0;}
+  margin-bottom:0;}
+
+h1{font-size: 24px;line-height:36px;font-weight:400;margin:0;}
+h2{font-size: 18px;line-height:30px;font-weight:400;margin:0;}
+
+.tutorial {margin-top:60px;}
+.tutorial p{font-size:16px;text-align: center;line-height:27px;}
+
 
 .level-label {display: block;
   font-size: 16px;
