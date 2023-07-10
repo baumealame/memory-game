@@ -677,7 +677,7 @@ letter-spacing:0px}
 }
 
 @media screen and (max-width: 600px) {
-        .wrapper_game {top:90px}
+    .wrapper_game {top:90px}
     .heading{padding:12px 0;font-size:20px;line-height:20px;font-weight:400;}
     .level-label {position:absolute;top:10px;right:12px}
     .eng-title{font-size: 12px;line-height:12px;padding-top:7px}
@@ -687,7 +687,7 @@ letter-spacing:0px}
     #cards-container-game8 .name {font-size:11px;line-height:11px;margin-bottom:0px;}
     #cards-container-game12 .label {display:none;}
     #cards-container-game20 .label {display:none;}
-    .wrapper_btn {margin:20px}
+    .wrapper_btn {margin:0 20px 20px 20px}
     .btn-refresh, .timer {top:54px;}
     
     .front, .back {box-shadow: 2px 2px 3px RGBa(88,76,67,0.35);}
