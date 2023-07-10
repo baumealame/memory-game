@@ -1,34 +1,3 @@
-/* Fonts */
-@font-face {
-    font-family: 'Ortankhangeultext';
-    src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab5bf617bb88f9d9ace8_OrtankHangeulText-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ortankhangeultext';
-    src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab8084451636a5964c5f_OrtankHangeulText-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Ortankhangeultext';
-    src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab2694e636357948837e_OrtankHangeulText-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-
-/* only test*/
-
-/* General */
-
-
 /* Main page */
 .heading {background-color: #f3f2ea; display:block; position:fixed;top:0;left:0;right:0;
 margin:0;
@@ -36,7 +5,6 @@ margin-bottom:0;
 padding:19px 0 16px 0;
 font-size: 30px;line-height:35px;font-weight:300;
 border-bottom:1px solid #584c43;z-index: 10}
-
 
 
 .eng-title{font-size: 16px;line-height:16px;font-weight:500;margin:0;padding-top:10px}
@@ -275,7 +243,7 @@ letter-spacing:0px}
 	 top: 0;
 	 padding: 30px;
 	 margin: 0 -1px 0 -1px;
-	 z-index: 10;
+	 z-index:6;
 	 transition: top 140ms linear;
      
      color: #584c43;
@@ -637,7 +605,7 @@ letter-spacing:0px}
     
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {    .tutorial{margin-top:40px;}
     
     .wrapper_game {top:80px}
 
@@ -681,7 +649,7 @@ letter-spacing:0px}
     
     
     
-    .tutorial{margin-top:40px;}
+
     
     .timer {top:12px;left:12px;}
     .timer .stopwatch {
@@ -719,7 +687,7 @@ letter-spacing:0px}
     #cards-container-game8 .name {font-size:11px;line-height:11px;margin-bottom:0px;}
     #cards-container-game12 .label {display:none;}
     #cards-container-game20 .label {display:none;}
-    .wrapper_btn {margin:0 20px 20px 20px}
+    .wrapper_btn {margin:20px}
     .btn-refresh, .timer {top:54px;}
     
     .front, .back {box-shadow: 2px 2px 3px RGBa(88,76,67,0.35);}

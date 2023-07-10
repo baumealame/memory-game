@@ -1,3 +1,29 @@
+/* Fonts */
+@font-face {
+    font-family: 'Ortankhangeultext';
+    src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab5bf617bb88f9d9ace8_OrtankHangeulText-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ortankhangeultext';
+    src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab8084451636a5964c5f_OrtankHangeulText-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ortankhangeultext';
+    src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab2694e636357948837e_OrtankHangeulText-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 body {word-break: keep-all;
   background-color: #f3f2ea;
   font-family: 'Ortankhangeultext', sans-serif;
@@ -7,13 +33,26 @@ body {word-break: keep-all;
 
 a{text-decoration: none;cursor: pointer}
 
+.heading {background-color: #f3f2ea; display:block; position:fixed;top:0;left:0;right:0;
+margin:0;
+margin-bottom:0;
+padding:19px 0 16px 0;
+font-size: 30px;line-height:35px;font-weight:300;
+border-bottom:1px solid #584c43;z-index: 10}
+
+.eng-title{font-size: 16px;line-height:16px;font-weight:500;margin:0;padding-top:10px}
+
+
 .wrapper_body {height:100%;display: flex;flex-direction: column;min-height: 100vh;}
+
+
 
 /* 푸터 */
 .footer{display:block;width:100%;
     max-width:400px;
     margin:0 auto;
-    text-align:center;}
+    text-align:center;
+    z-index: 10;}
 .wrap_footer_btns {padding:10px 20px;}
 
 .link-to-copy {font-size:0;line-height:0;}
@@ -62,7 +101,7 @@ a{text-decoration: none;cursor: pointer}
 
 .footer a{cursor: pointer;color:#584c43;}
 
-.footer_txt {vertical-align:middle;
+.footer_txt {margin:auto 0;
   font-size: 11px;
   line-height: 15px;
   color:#99897e;
