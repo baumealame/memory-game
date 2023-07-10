@@ -4,7 +4,6 @@
     src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab5bf617bb88f9d9ace8_OrtankHangeulText-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -12,7 +11,6 @@
     src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab8084451636a5964c5f_OrtankHangeulText-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -20,7 +18,6 @@
     src: url('https://uploads-ssl.webflow.com/64520b917dd4e006c8db2106/6480ab2694e636357948837e_OrtankHangeulText-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
 }
 
 
