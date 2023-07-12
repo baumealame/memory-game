@@ -45,8 +45,7 @@ a{text-decoration: none;cursor: pointer}
 
 .link-to-copy {font-size:0;line-height:0;}
 
-.footer_btn {cursor: pointer;
-    width:100%;
+.footer_btn {cursor: pointer;display: block;
     border:1px solid #7c7067;
     border-radius:30px;
     padding:12px 5px;
@@ -56,9 +55,13 @@ a{text-decoration: none;cursor: pointer}
     font-weight: 400;
     font-size:16px;line-height:16px;
     color:#584c43;}
+
 .footer_btn:hover {
     background-color:#584c43;
     color:#f3f2ea;}
+
+button.footer_btn{width:100%;}
+
 
 .copy_done{background-color:#83ff90;color:#584c43;}
 .copy_done:hover{background-color:#83ff90;color:#584c43;}
